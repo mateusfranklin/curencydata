@@ -35,7 +35,6 @@ class ApiController extends Controller
 
         if ($request->code_list) {
             $codes = explode(',', $request->code_list);
-            // print_r($codes);die;
             foreach($codes as $code) {
                 foreach ($currencyList as $currency) {
                     if ($currency['code'] == trim($code)) {
@@ -47,7 +46,6 @@ class ApiController extends Controller
 
         if ($request->number_list) {
             $numbers = explode(',', $request->number_list);
-            // print_r($numbers);die;
             foreach($numbers as $number) {
                 foreach ($currencyList as $currency) {
                     if ($currency['number'] == trim($number)) {
